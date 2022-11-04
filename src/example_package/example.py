@@ -18,3 +18,7 @@ def add_one(number):
 
     """
     return number + 1
+
+
+def quadratic(x):
+	return x**2

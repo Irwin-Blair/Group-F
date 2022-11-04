@@ -1,4 +1,4 @@
-from example_package.example import add_one
+from example_package.example import add_one, quadratic
 import pytest
 
 
@@ -13,3 +13,8 @@ def test_add_one_fails():
     number = "str"
     with pytest.raises(TypeError):
         add_one(number)
+
+
+def test_quadratic():
+    number = 2
+    assert number **2  == quadratic(number)
