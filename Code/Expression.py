@@ -60,13 +60,13 @@ class expression:
             counter += 1
         expressions.append(expression(input[lastExpression: counter]))           
 
-def getCustomFunction():
-    function = expression(KindInput(str))
+def getCustomFunction(input):
+    function = expression(input)
     function.printConfirmation()
     input = KindInput(str)
     if (input.upper() == "Y"):
         print("Proceeding")
         #Print Graph method here, get variable values from user. Call function.evaluate(variables) to get a value for the function.
     else:
-        getCustomFunction()
-getCustomFunction()        
+        print("Trying again")
+        #Get new input here and call the function again.      
