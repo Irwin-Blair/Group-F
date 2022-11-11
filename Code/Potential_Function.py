@@ -167,12 +167,11 @@
 
 
 # My changes are below
-stringin = "hello+"
-def KindInput(Type):
+def KindInput(Type,input1):
     """Takes an input that doesn't crash program if it can't be used."""
     Check=False
     while Check is False:
-        Input=stringin
+        Input=input1
         if Type==float:
             try:
                 float(Input)
