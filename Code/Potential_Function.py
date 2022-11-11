@@ -166,7 +166,9 @@ def User_Defined_Potential(x):
     return np.array(Potential),Function_Choice
 
 def KindInput(Type):
-    """Takes an input that doesn't crash program if it cant be used."""
+    """Takes an input that doesn't crash program if it cant be used.
+
+    """
     Check=False
     while Check is False:
         Input=input()
