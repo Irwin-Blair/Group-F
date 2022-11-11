@@ -1,12 +1,12 @@
 [build-system]
-requires = ["setuptools<=61.0"]
+requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "example_package_ZJAP014"
+name = "example_package_YOUR_USERNAME_HERE"
 version = "0.0.1"
 authors = [
-  { name="ZJAP014", email="ZJAP014@live.rhul.ac.uk" },
+  { name="Example Author", email="author@example.com" },
 ]
 description = "A small example package"
 readme = "README.md"
