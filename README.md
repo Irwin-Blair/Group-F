@@ -26,6 +26,6 @@ Credit
 ------
 
 Source Code: https://github.com/Irwin-Blair/Group-F
-Authors: ADD NAMES
+Authors: Irwin Blair, Iarla Boyce, Becca Mallett, Ciar Moore-Saxton, Adam Proctor-Lowe, Robert Wade
 
 This software is licensed under the MIT license.
