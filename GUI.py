@@ -2,8 +2,8 @@ import tkinter as tk
 import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image,ImageTk
-from ErwinS import Simulation
 from itertools import count, cycle
+from ErwinS import Simulation
 window = tk.Tk()
 window.title('Schrodinger Equation Sim')
 window.geometry('600x400')
@@ -80,7 +80,6 @@ def Schrodinger():
     Button.pack()
     buttonoptions=tk.Button(text="Return to options",command=Options,width=25,height=10,background="yellow")
     buttonoptions.pack()
-    
     
 def Step():
     ClearWindow()
@@ -185,6 +184,12 @@ def Custom(SuppressMessage=True):
     if SuppressMessage is False:
         Message=tk.Label(text="Sorry, that equation didn't work. Please try again.")
         Message.pack()
+        
+def Barrier():
+    pass
+
+def Well():
+    pass
     
 def Main():
     global X_min
@@ -249,19 +254,19 @@ def Options():
         text="Square well function",
         width=15,
         height=2,
-        command=Custom
+        command=Well
     )
     button_barriers = tk.Button(
         text="Barrier function",
         width=15,
         height=2,
-        command=Custom
+        command=Barrier
     )
-    button_step.place(relx=0.04,rely=0.1)
-    button_barriers.place(relx=0.04,rely=0.2)
-    button_well.place(relx=0.04,rely=0.3)
-    button_custom.place(relx=0.075,rely=0.4)
+    button_step.place(relx=0.255,rely=0.1)
+    button_barriers.place(relx=0.255,rely=0.2)
+    button_well.place(relx=0.255,rely=0.3)
+    button_custom.place(relx=0.255,rely=0.4)
     button_Main = tk.Button(text="Return to the start",width=20,height=3,command=Main)
-    button_Main.place(relx=0.025,rely=0.5)
+    button_Main.place(relx=0.225,rely=0.5)
 Main()
 window.mainloop()
