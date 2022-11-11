@@ -30,7 +30,7 @@ Launch the GUI via the command line by entering the following instructions:
 
 `$ pip install -r GUI.py`
 
-`$ ./GUI.py`
+`$ python ./GUI.py`
   
   
 Credit
