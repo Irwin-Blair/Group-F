@@ -18,8 +18,17 @@ The inbuilt functions are;
 Installation
 ------------
 
-Install by running
-  `pip install SOFTWARENAME.py`
+Install by entering the following instructions in the command line:
+
+`$ git clone https://github.com/Irwin-Blair/Group-F`
+
+`$ cd Group-F`
+
+`$ pip install -r requirements.txt`
+
+`$ pip install -r GUI.py`
+
+`$ ./GUI.py`
   
   
 Credit
