@@ -15,7 +15,9 @@ from Potential_Function import User_Defined_Potential, KindInput
 
 plt.rcParams["axes.labelsize"] = 16
 
+# Allowing user input for the placement for the wave function on the plot
 print("Please input desired wave placement:")
+# Using the function KindInput created by Irwin the user can input any float for the wave placement
 wave_placement = float(KindInput(float))
 print(type(wave_placement))
 # Input parameters
@@ -31,7 +33,9 @@ k = 1
 # Calculate grid, potential, and initial wave function
 x_array = np.linspace(xmin, xmax, Nx)
 t_array = np.linspace(tmin, tmax, Nt)
+# User defined v(x) with function User_Defined_Potential created by Irwin 
 v_x = User_Defined_Potential(x_array)[0]
+# wave function with user input placement
 psi = np.exp(-(x_array - wave_placement)**2)
 
 # Calculate finite difference elements
