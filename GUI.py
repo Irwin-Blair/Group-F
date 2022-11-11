@@ -218,7 +218,6 @@ def Options():
     if X_min=="":
         try:
             X_max=float(entryxmax.get())
-            print("Check")
             X_min=float(entryxmin.get())
         except:
             Check=False
@@ -227,28 +226,42 @@ def Options():
         Warning_X=tk.Label(text="Warning, x-values weren't given as numbers. Using X_min of 0 and X_max=5.")
         X_min=0
         X_max=5
-        Warning_X.grid(row=3,column=0)
+        Warning_X.place(rely=0.9,relx=0.15)
     global x
     x=np.linspace(X_min,X_max,num=round(100*X_max-X_min))
         
         
     greeting = tk.Label(text="Please enter the type of potential you would like to simulate.")
-    greeting.grid(row=0,column=0)
+    greeting.place(relx=0.05,rely=0.005)
     button_step = tk.Button(
         text="Step function",
-        width=25,
-        height=5,
+        width=15,
+        height=2,
         command=Step
     )
     button_custom = tk.Button(
         text="Custom function",
-        width=25,
-        height=5,
+        width=15,
+        height=2,
         command=Custom
     )
-    button_step.grid(row=1,column=0)
-    button_custom.grid(row=1,column=1)
-    button_Main = tk.Button(text="Return to the start",width=50,height=5,command=Main)
-    button_Main.grid(row=2,column=0)
+    button_well = tk.Button(
+        text="Square well function",
+        width=15,
+        height=2,
+        command=Custom
+    )
+    button_barriers = tk.Button(
+        text="Barrier function",
+        width=15,
+        height=2,
+        command=Custom
+    )
+    button_step.place(relx=0.04,rely=0.1)
+    button_barriers.place(relx=0.04,rely=0.2)
+    button_well.place(relx=0.04,rely=0.3)
+    button_custom.place(relx=0.075,rely=0.4)
+    button_Main = tk.Button(text="Return to the start",width=20,height=3,command=Main)
+    button_Main.place(relx=0.025,rely=0.5)
 Main()
 window.mainloop()
