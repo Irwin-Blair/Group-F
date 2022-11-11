@@ -8,7 +8,7 @@ Features
 --------
 
 There are inbuilt functions which can be selected, or the user can input a custom potential function.
-The inbuilt functions are;
+The inbuilt functions are:
 * Barrier
 * Quantum Harmonic Oscillator
 * Square Well
