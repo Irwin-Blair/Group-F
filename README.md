@@ -1,18 +1,20 @@
 # Schrodinger Equation Simulator
 
-This software package provides a command-line tool that can be used to simulate the Time-Independent Schrodinger Equation for an input potential function. A Graphical User Interface allows input of a potential function and parameters, and a GIF file of the simulation is returned.
+This software package provides a command-line tool that can be used to simulate the Time-Independent Schrodinger Equation for an input potential function. 
 
 ADD SIMPLE EXAMPLE HERE
 
 Features
 --------
 
-There are inbuilt functions which can be selected, and allowance for customisation of default function parameters, or the user can input a custom potential function.
+There are inbuilt functions which can be selected, or the user can input a custom potential function.
 The inbuilt functions are;
 * Barrier
 * Quantum Harmonic Oscillator
 * Square Well
 * Step
+
+A Graphical User Interface is used for this selection/input process, which also allows the user to customise the function parameters. It then shows a GIF of the resulting simulation.
 
 
 Installation
