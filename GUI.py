@@ -2,9 +2,48 @@ import tkinter as tk
 import matplotlib.pyplot as plt
 import numpy as np
 from PIL import Image,ImageTk
+from ErwinS import Simulation
+from itertools import count, cycle
 window = tk.Tk()
 window.title('Schrodinger Equation Sim')
 window.geometry('600x400')
+
+class ImageLabel(tk.Label):
+    """
+    A Label that displays images, and plays them if they are gifs
+    :im: A PIL Image instance or a string filename
+    """
+    def load(self, im):
+        if isinstance(im, str):
+            im = Image.open(im)
+        frames = []
+
+        try:
+            for i in count(1):
+                frames.append(ImageTk.PhotoImage(im.copy()))
+                im.seek(i)
+        except EOFError:
+            pass
+        self.frames = cycle(frames)
+
+        #try:
+            #self.delay = im.info['duration']
+        #except:
+        self.delay = 100
+
+        if len(frames) == 1:
+            self.config(image=next(self.frames))
+        else:
+            self.next_frame()
+
+    def unload(self):
+        self.config(image=None)
+        self.frames = None
+
+    def next_frame(self):
+        if self.frames:
+            self.config(image=next(self.frames))
+            self.after(self.delay, self.next_frame)
 
 def ClearWindow():
     for widget in window.winfo_children():
@@ -16,20 +55,32 @@ def GenImage():
     im = Image.open("Example.png")
     ph = ImageTk.PhotoImage(im)
     label = tk.Label(image=ph)
-    label.grid(row=0,column=0)
+    label.place(relx=0.125,rely=0)
     label.image=ph
     labeltext = tk.Label(text="This is your potential function. Do you want to simulate Schrodinger's equation?")
-    labeltext.grid(row=1,column=0)
-    buttonno=tk.Button(text="No",command=Options,width=25,height=10,background="red")
-    buttonno.grid(row=2,column=0)
-    buttonyes=tk.Button(text="Yes",command=Schrodinger,width=25,height=10,background="green")
-    buttonyes.grid(row=2,column=1)
+    labeltext.place(relx=0.128,rely=0.7)
+    buttonno=tk.Button(text="No",command=Options,width=15,height=7,background="red")
+    buttonno.place(rely=0.75,relx=0.125)
+    buttonyes=tk.Button(text="Yes",command=Schrodinger,width=15,height=7,background="green")
+    buttonyes.place(rely=0.75,relx=0.665)
     
 def Schrodinger():
     ClearWindow()
-    global x,v_x
-    Label=tk.Label(text=(x,v_x))
-    Label.pack()
+    Initial=tk.Scale(from_=X_min,to=X_max,orient="horizontal",resolution=0.001*(X_max-X_min))
+    Initial.pack()
+    def SIMULATE(InitialX=Initial):
+        global x,v_x
+        InitialX=InitialX.get()
+        print(InitialX)
+        Simulation(x,v_x,InitialX)
+        label = ImageLabel()
+        label.pack()
+        label.load('Example.gif')
+    Button=tk.Button(text="SIMULATE!",background="red",command=SIMULATE)
+    Button.pack()
+    buttonoptions=tk.Button(text="Return to options",command=Options,width=25,height=10,background="yellow")
+    buttonoptions.pack()
+    
     
 def Step():
     ClearWindow()
@@ -77,6 +128,7 @@ def StepImage():
             v_x[i]=Upper_Amplitude
         else:
             v_x[i]=Lower_Amplitude
+    plt.show()
     plt.plot(x,v_x)
     plt.savefig("Example")
     plt.show()
@@ -139,21 +191,25 @@ def Main():
     global X_max
     X_max,X_min="",""
     ClearWindow()
-    greeting = tk.Label(text="Please enter the type of potential you would like to simulate.")
-    greeting.grid(row=0,column=0)
+    greeting = tk.Label(text="Please enter the type of upper and lower bounds of x you would like to simulate.")
+    greeting.place(relx=0.125,rely=0.05)
     button_xvalues = tk.Button(
-        text="Submit x-values",
-        width=25,
+        text="Submit x limits",
+        width=15,
         height=5,
         command=Options
     )
-    button_xvalues.grid(row=1,column=0)
+    button_xvalues.place(relx=0.4,rely=0.5)
     global entryxmin
     global entryxmax
     entryxmin=tk.Entry(width=25)
     entryxmax=tk.Entry(width=25)
-    entryxmin.grid(row=2,column=0)
-    entryxmax.grid(row=2,column=1)
+    MinX=tk.Label(text="Minimum X")
+    MaxX=tk.Label(text="Maximum X")
+    MinX.place(rely=0.23,relx=0.22)
+    MaxX.place(rely=0.23,relx=0.68)
+    entryxmin.place(rely=0.3,relx=0.14)
+    entryxmax.place(rely=0.3,relx=0.6)
     
 def Options():
     Check=True
