@@ -1,6 +1,6 @@
-# Software package for solving the Time-Independent Schrodinger Equation -NAME?
+# Schrodinger Equation Simulator
 
-This software package provides a command-line tool that can be used to solve the Time-Independent Schrodinger Equation for an input potential function.
+This software package provides a command-line tool that can be used to simulate the Time-Independent Schrodinger Equation for an input potential function. A Graphical User Interface allows input of a potential function and parameters, and a GIF file of the simulation is returned.
 
 ADD SIMPLE EXAMPLE HERE
 
