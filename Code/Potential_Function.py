@@ -1,6 +1,20 @@
 def User_Defined_Potential(x):
     import numpy as np
-    """Fills in string Potential with corresponding potentials. Accepts a single dimensional list or array as x, outputs the potential function."""
+    """Fills in string Potential with corresponding potentials. Accepts a single dimensional list or array as x, outputs the potential function.
+
+	
+    Parameters
+    --------
+    x - the array of x points the schodinger equation will be calculated using.
+
+    Example of how to use function
+    --------
+    Testing that potential comes out as desired
+    import matplotlib.pyplot as plt
+    import numpy as np
+    x=np.linspace(-5,5,num=1000)
+    plt.plot(x,User_Defined_Potential(x)[0])
+    """
     print("Please input the desired form of a potential function\nCurrently inbuilt funtions are:\nStep\nQuantum Harmonic Oscillator (QHO)\nSquare Well\nBarrier\nIf you want to input a custom function, please input Custom.")
     Function_Choice=KindInput(str)
     Function_Choice_Capitalized=Function_Choice.upper()
@@ -166,7 +180,17 @@ def User_Defined_Potential(x):
     return np.array(Potential),Function_Choice
 
 def KindInput(Type):
-    """Takes an input that doesn't crash program if it cant be used."""
+    """Takes the input and changes or rejects it based on the type of word/number inputted.
+
+    Parameters
+    -----------
+    Type - asks the user for an input in the command line. If the user inputs a value that is not a useable type it will ask the user to try again. 
+
+    Example
+    -------
+    KindInput(Float):
+    
+    ##output = this will ask user in command line for an input rather that in the python code."""
     Check=False
     while Check is False:
         Input=input()
