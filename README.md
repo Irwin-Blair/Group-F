@@ -1,6 +1,6 @@
-# Software package for solving the Time-Independent Schrodinger Equation
+# Software package for solving the Time-Independent Schrodinger Equation -NAME?
 
-This software package provides a command-line tool that can be used to solve the TISE for an input potential function.
+This software package provides a command-line tool that can be used to solve the Time-Independent Schrodinger Equation for an input potential function.
 
 ADD SIMPLE EXAMPLE HERE
 
@@ -19,7 +19,7 @@ Installation
 ------------
 
 Install by running
-  `pip install potential_function.py`   IS THIS RIGHT???
+  `pip install SOFTWARENAME.py`
   
   
 Credit
