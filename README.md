@@ -20,7 +20,7 @@ A Graphical User Interface is used for this selection/input process, which also 
 Installation
 ------------
 
-Install via the command line by entering the following instructions:
+Launch the GUI via the command line by entering the following instructions:
 
 `$ git clone https://github.com/Irwin-Blair/Group-F`
 
