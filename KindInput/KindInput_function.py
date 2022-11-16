@@ -1,5 +1,5 @@
 # My modified KindInput function is below
-def KindInput(Type,input1):
+def KindInput(Type):
     """Makes sure the input is an acceptable type for the program to run. It also cuts out unnecessary characters like spaces.
     
     Parameters
@@ -14,14 +14,14 @@ def KindInput(Type,input1):
 
     Example
     ------------
-    This function would be called in other functions, as the user inputs a float, string or integer
+    This function would be run in the command line, as the user inputs a float, string or integer
     KindInput(input, variable_type)
     
     """
     import re
     Check=False
     while Check is False:
-        Input=input1
+        Input=input()
         if Type==float:
             try:
                 float(Input)
