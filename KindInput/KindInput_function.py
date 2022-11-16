@@ -1,6 +1,23 @@
 # My modified KindInput function is below
 def KindInput(Type,input1):
-    """Takes an input that doesn't crash program if it can't be used."""
+    """Makes sure the input is an acceptable type for the program to run. It also cuts out unnecessary characters like spaces.
+    
+    Parameters
+    ------------
+    Type = the kind of input the user is inserting
+    E.g. string = "Hello world" or float = 0.4643
+
+
+    input1 = This is what the user inputs
+    E.g. Hello world or 0.4643
+
+
+    Example
+    ------------
+    This function would be used in the comand line, as the user inputs a float, string or integer
+    KindInput(input, variable_type)
+    
+    """
     import re
     Check=False
     while Check is False:
