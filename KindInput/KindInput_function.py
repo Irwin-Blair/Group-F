@@ -14,7 +14,7 @@ def KindInput(Type,input1):
 
     Example
     ------------
-    This function would be used in the comand line, as the user inputs a float, string or integer
+    This function would be called in other functions, as the user inputs a float, string or integer
     KindInput(input, variable_type)
     
     """
