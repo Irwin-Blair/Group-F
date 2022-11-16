@@ -1,37 +1,43 @@
-# Template repository for PH3010 Advanced Python
+# Schrodinger Equation Simulator
 
-This is a template repository demonstrating how to package a python project. The directory is structured as follows:
-```
-template_project_PH3010_advanced_python/
-├── .gitignore
-├── LICENSE
-├── README.md
-├── pyproject.toml
-├── requirements.txt
-├── setup.cfg
-├── .github/
-│   └── workflows/
-│              └── python_test.yml
-├── docs/
-│   └── ../
-│   └── workflows/
-├── src/
-│   └── example_package/
-│       ├── __init__.py
-│       ├── command_line_interface.py
-│       └── example.py
-└── tests/
-        └── test_example.py
-```
+This software package provides a command-line tool that can be used to simulate the Time-Independent Schrodinger Equation for an input potential function. 
 
-Let's look at each element individually
+ADD SIMPLE EXAMPLE HERE
 
-* `.gitignore` contains files that should be ignored by git
-* `LICENSE` the project license telling users who install your package the terms under which they can use your package
-* `README.md` A [markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) document telling users about the project
-* `pyproject.toml` tells build tools (like pip and build) what is required to build your project.
-* `requirements.txt` contains the requirements for the project, you can install these with `pip install -r requirements.txt`
-* `docs/` contains the documentation - we won't discuss this further here.
-* `.github/workflows/python_test.yml` contains a [YAML](https://yaml.org/) file which determined how github Action are run
-* `src/` contains the python package itself
-* `tests/` contains the tests of the python package
+Features
+--------
+
+There are inbuilt functions which can be selected, or the user can input a custom potential function.
+The inbuilt functions are:
+* Barrier
+* Quantum Harmonic Oscillator
+* Square Well
+* Step
+
+A Graphical User Interface is used for this selection/input process, which also allows the user to customise the function parameters. It then shows a GIF of the resulting simulation.
+
+
+Installation
+------------
+
+Launch the GUI via the command line by entering the following instructions:
+
+`$ git clone https://github.com/Irwin-Blair/Group-F`
+
+`$ cd Group-F`
+
+`$ pip install -r requirements.txt`
+
+`$ pip install -r GUI.py`
+
+`$ python ./GUI.py`
+  
+  
+Credit
+------
+
+Source Code: https://github.com/Irwin-Blair/Group-F
+
+Authors: Irwin Blair, Iarla Boyce, Becca Mallett, Ciar Moore-Saxton, Adam Proctor-Lowe, Robert Wade
+
+This software is licensed under the MIT license.
