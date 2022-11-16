@@ -21,10 +21,10 @@ def KindInput(Type,input1):
             try:
                 str(Input)
                 Input = Input.replace(" ","")   #  Cuts out spaces
-                Input = re.sub('[£$%@?\#]', '', Input)  # Cuts out non-wanted characters
+                Input = re.sub('[£$%&@?\#]', '', Input)  # Cuts out non-wanted characters
                 
                 # Start of check for rogue operators at start or end
-                bad_chars = ["x","+","-","/"]
+                bad_chars = ["x","+","-","/","*","^"]
                 if (Input[0]) in bad_chars or (Input[-1]) in bad_chars:
                     raise ValueError()
                 else:
