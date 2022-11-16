@@ -7,15 +7,10 @@ def KindInput(Type):
     Type = the kind of input the user is inserting
     E.g. string = "Hello world" or float = 0.4643
 
-
-    input1 = This is what the user inputs
-    E.g. Hello world or 0.4643
-
-
     Example
     ------------
     This function would be run in the command line, as the user inputs a float, string or integer
-    KindInput(input, variable_type)
+    KindInput(int)
     
     """
     import re
