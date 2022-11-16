@@ -3,12 +3,12 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "example_package_YOUR_USERNAME_HERE"
+name = "Solving_Schrodingers_equation_ZJAP014"
 version = "0.0.1"
 authors = [
-  { name="Example Author", email="author@example.com" },
+  { name="Irwin Blair, Iarla Boyce, Becca Mallett, Ciar Moore-Saxton, Adam Proctor-Lowe, Robert Wade", email="Irwin.blair.2020@live.rhul.ac.uk, Iarla.boyce.2019@live.rhul.ac.uk, Rebecca.mallett.2020@live.rhul.ac.uk, Ciar.moore-saxton.2019@live.rhul.ac.uk, Adam.proctor-lowe.2020@live.rhul.ac.uk, Robert.wade.2020@live.rhul.ac.uk"  },
 ]
-description = "A small example package"
+description = "A package that solves Schrodingers Equation with a GUI."
 readme = "README.md"
 requires-python = ">=3.7"
 classifiers = [
