@@ -1,6 +1,7 @@
 # My modified KindInput function is below
 def KindInput(Type,input1):
     """Takes an input that doesn't crash program if it can't be used."""
+    import re
     Check=False
     while Check is False:
         Input=input1
@@ -20,6 +21,7 @@ def KindInput(Type,input1):
             try:
                 str(Input)
                 Input = Input.replace(" ","")   #  Cuts out spaces
+                Input = re.sub('[£$%@?\#]', '', Input)  # Cuts out non-wanted characters
                 
                 # Start of check for rogue operators at start or end
                 bad_chars = ["x","+","-","/"]
