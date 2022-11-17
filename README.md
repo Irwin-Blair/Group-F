@@ -8,7 +8,6 @@ Features
 There are inbuilt functions which can be selected, or the user can input a custom potential function.
 The inbuilt functions are:
 * Barrier
-* Quantum Harmonic Oscillator
 * Square Well
 * Step
 
@@ -41,7 +40,7 @@ IF running on Windows Subsystem for Linux:
 
 THEN run 
 
-`$ python ./GUI.py`
+`$ python ./GUI_Simulation.py`
   
   
 Credit
