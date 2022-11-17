@@ -2,8 +2,5 @@ numpy
 scipy
 pytest
 pytest-cov
-tkinter
 matplotlib
-PIL
-itertools
 findiff
