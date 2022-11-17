@@ -26,7 +26,20 @@ Launch the GUI via the command line by entering the following instructions:
 
 `$ pip install -r requirements.txt`
 
-`$ pip install -r GUI.py`
+Additionally,
+IF running on Windows:
+
+`pip install tkinter`
+
+`pip install PIL`
+
+IF running on Windows Subsystem for Linux:
+
+`pip install tk`
+
+`pip install pillow`
+
+THEN run 
 
 `$ python ./GUI.py`
   
