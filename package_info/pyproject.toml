@@ -6,7 +6,7 @@ build-backend = "setuptools.build_meta"
 name = "Solving_Schrodingers_equation_ZJAP014"
 version = "0.0.1"
 authors = [
-  { name="Irwin Blair, Iarla Boyce, Becca Mallett, Ciar Moore-Saxton, Adam Proctor-Lowe, Robert Wade", email="Irwin.blair.2020@live.rhul.ac.uk, Iarla.boyce.2019@live.rhul.ac.uk, Rebecca.mallett.2020@live.rhul.ac.uk, Ciar.moore-saxton.2019@live.rhul.ac.uk, Adam.proctor-lowe.2020@live.rhul.ac.uk, Robert.wade.2020@live.rhul.ac.uk"  },
+  { name="ZJAP014, email=ZJAP014@live.rhul.ac.uk"  },
 ]
 description = "A package that solves Schrodingers Equation with a GUI."
 readme = "README.md"
